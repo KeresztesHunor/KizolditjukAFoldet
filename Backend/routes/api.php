@@ -21,6 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/bejegyzesek', [BejegyzesController::class, 'index']);
 Route::get('/bejegyzesek/{osztaly_id}', [BejegyzesController::class, 'showOsztalyId']);
+Route::get('/bejegyzesekTevekenysegekkel', [BejegyzesController::class, 'showTevekenysegekkel']);
 Route::post('/bejegyzes', [BejegyzesController::class, 'store']);
 
 Route::get('/tevekenysegek', [TevekenysegController::class, 'index']);

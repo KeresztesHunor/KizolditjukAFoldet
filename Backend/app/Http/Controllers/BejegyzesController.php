@@ -13,6 +13,15 @@ class BejegyzesController extends Controller
         return response()->json(Bejegyzes::all());
     }
 
+    public function showTevekenysegekkel()
+    {
+        return DB::table('bejegyzes as b')
+            ->select('*')
+            ->join('tevekenysegs as t', 'b.tevekenyseg_id', '=', 't.tevekenyseg_id')
+            ->get()
+        ;
+    }
+
     public function showOsztalyId($osztaly_id)
     {
         return DB::table('bejegyzes as b')

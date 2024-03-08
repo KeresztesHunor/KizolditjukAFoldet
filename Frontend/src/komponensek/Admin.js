@@ -1,3 +1,5 @@
+import Tablasor from "./Tablasor";
+
 export default function Admin(props)
 {
     return (
@@ -30,6 +32,11 @@ export default function Admin(props)
                             <th>Státusz</th>
                         </tr>
                     </thead>
+                    <tbody>{
+                        props.bejegyzesek.map((bejegyzes, index) => (
+                            <Tablasor key={index} bejegyzes={bejegyzes}></Tablasor>
+                        ))
+                    }</tbody>
                 </table>
             </div>
         </main>

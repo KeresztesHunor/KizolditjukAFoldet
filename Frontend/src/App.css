@@ -12,3 +12,23 @@
   gap: 4px;
   border: 1px solid black;
 }
+
+.App > main > div > table {
+  width: 100%;
+}
+
+.App > main > div > table > thead > tr > th,
+.App > main > div > table > tbody > tr > td {
+  border: 1px solid black;
+}
+
+.App > main > div > table > thead > tr,
+.App > main > div > table > tbody > tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+@media screen and (max-width: 1024px) {
+  .App > main > div > form {
+    grid-template-columns: 100%;
+  }
+}
